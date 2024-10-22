@@ -53,7 +53,26 @@
                     <a href="https://instagram.com/foxb_oro2?igshid=NzZlODBkYWE4Ng=="><i class="bi bi-instagram"></i></a>
                     <a href="http://t.me/@JOKEBN17"><i class="bi bi-telegram"></i></a>
                 </div>
-                <button class="cv-btn">Download CV</button>
+                <button id="copyButton">Copy CV</button>
+
+<script>
+document.getElementById("copyButton").addEventListener("click", function() {
+    // متن مورد نظر برای کپی کردن
+    var v2rayText=
+       vless://ea3b5ee5-2075-467f-9b41-7889d8d3f89f@Zmaoz.Faculty.Ucdavis.Edu:443?path=%2F%40Parsashonam%2C%40ParsashonamBots%2C%40Parsashonam_Bot%2Fws%2F%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=ParsashonamFiBot.Com&fp=firefox&type=ws&sni=Zmaoz.Faculty.Ucdavis.Edu.#%40Parsashonam%F0%9F%87%AB%F0%9F%87%AE5592451570_4f91 
+    var v2rayText = "This is my CV text to be copied!";
+    
+    // ایجاد یک عنصر موقت برای کپی کردن متن
+    var tempInput = document.createElement("textarea");
+    tempInput.value = v2rayText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    
+    alert("v2ray text copied to clipboard!");
+});
+</script>
             </div>
         </div>
     </section>
