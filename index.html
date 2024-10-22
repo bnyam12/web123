@@ -88,30 +88,49 @@
                     <a href="https://instagram.com/foxb_oro2?igshid=NzZlODBkYWE4Ng=="><i class="bi bi-instagram"></i></a>
                     <a href="http://t.me/@JOKEBN17"><i class="bi bi-telegram"></i></a>
                 </div>
-             <button id="copyButton">v2ray</button>
-
-<script>
+            <!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text Example</title>
     <style>
         .oval {
-    display: inline-block; /* برای اینکه سایز به متن بچسبد */
-    padding: 10px 20px; /* فاصله داخلی */
-    border-radius: 50px; /* شکل بیضی */
-    background-color: #f0f0f0; /* رنگ پس‌زمینه */
-    text-align: center; /* متن را در وسط قرار می‌دهد */
-    border: 2px solid #ccc; /* حاشیه (اختیاری) */
-}
+            display: inline-block; /* برای اینکه سایز به متن بچسبد */
+            padding: 10px 20px; /* فاصله داخلی */
+            border-radius: 50px; /* شکل بیضی */
+            background-color: #f0f0f0; /* رنگ پس‌زمینه */
+            text-align: center; /* متن را در وسط قرار می‌دهد */
+            border: 2px solid #ccc; /* حاشیه */
+            cursor: pointer; /* نشانگر ماوس به صورت دکمه */
+            transition: background-color 0.3s; /* انیمیشن تغییر رنگ */
+        }
+
+        .oval:hover {
+            background-color: #e0e0e0; /* تغییر رنگ پس‌زمینه در حالت hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="oval" id="copyButton">v2ray</div>
+
+<script>
 document.getElementById("copyButton").addEventListener("click", function() {
     // متن مورد نظر برای کپی کردن
     var cvText = "vless://ea3b5ee5-2075-467f-9b41-7889d8d3f89f@Zmaoz.Faculty.Ucdavis.Edu:443?path=%2F%40Parsashonam%2C%40ParsashonamBots%2C%40Parsashonam_Bot%2Fws%2F%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=ParsashonamFiBot.Com&fp=firefox&type=ws&sni=Zmaoz.Faculty.Ucdavis.Edu.#%40Parsashonam%F0%9F%87%AB%F0%9F%87%AE5592451570_4f91";
     
     // استفاده از Clipboard API برای کپی کردن متن
     navigator.clipboard.writeText(cvText).then(function() {
-        alert("Text copied to clipboard!");
+        alert("متن به کلیپ بورد کپی شد!");
     }).catch(function(err) {
-        alert("Failed to copy text: ", err);
+        alert("کپی متن ناموفق بود: ", err);
     });
-}); </style>
+}); 
 </script>
+
+</body>
+</html>
             </div>
         </div>
     </section>
