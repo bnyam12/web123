@@ -301,4 +301,14 @@ section {
         right: 10px;
         width: 100%;
     }
-}
+} 
+<style>
+  #myVideo {
+    width: 200px; /* اندازه ویدیو */
+    height: 200px; /* اندازه ویدیو */
+    border-radius: 50%; /* گرد کردن ویدیو */
+    object-fit: cover; /* پر کردن کل محتوای ویدیو */
+    display: block;
+    margin: 0 auto; /* قرار دادن در وسط */
+  }
+</style>
