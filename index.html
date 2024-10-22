@@ -37,9 +37,37 @@
                 <div class="blue-bg-outer">
                     <div class="white-bg">
                         <div class="blue-bg">
-                            <video autoplay loop muted id="myVideo">
-  <source src="path-to-video/VID_20241021_003032_910_resized.mp4" type="video/mp4">
-</video>
+                           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Video in Center</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        video {
+            width: 300px; /* اندازه ویدیو */
+            height: 300px;
+            border-radius: 50%; /* گرد کردن ویدیو */
+            object-fit: cover; /* پر کردن دایره با ویدیو */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="VID_20241021_003032_910_resized.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
                         </div>
                     </div>
                 </div>
