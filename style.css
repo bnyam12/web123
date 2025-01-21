@@ -307,4 +307,31 @@ video.video-rounded {
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
+    #chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+}
+
+.cell:nth-child(even) {
+  background-color: #f0d9b5;
+}
+
+.cell:nth-child(odd) {
+  background-color: #b58863;
+}
+
+.piece {
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+}
 }} 
