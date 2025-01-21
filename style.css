@@ -302,3 +302,10 @@ section {
         width: 100%;
     }
 } 
+.rounded-video {
+  width: 300px; /* اندازه ویدئو */
+  height: 300px;
+  border-radius: 50%; /* گرد کردن ویدئو */
+  overflow: hidden; /* جلوگیری از خروج محتوا از دایره */
+  object-fit: cover; /* تناسب محتوا داخل دایره */
+}
