@@ -1,64 +1,37 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازی شطرنج آنلاین</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard.min.css">
-    <style>
-        #board {
-            width: 400px;
-            margin: 20px auto;
-        }
-        #nameForm {
-            text-align: center;
-        }
-    </style>
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="text-align:center;">بازی شطرنج آنلاین</h1>
-    <div id="nameForm">
-        <input type="text" id="username" placeholder="نام شما">
-        <input type="text" id="opponent" placeholder="نام حریف">
-        <button id="startGame">شروع بازی</button>
-    </div>
+    <h1>Two-Player Chess Game</h1>
     <div id="board"></div>
-
     <script>
-        const socket = io('https://your-socket-server-url'); // آدرس سرور Socket.io
-        const board = Chessboard('board', {
-            draggable: true,
-            dropOffBoard: 'snapback',
-            position: 'start'
-        });
-        const game = new Chess();
+        const board = document.createElement('table');
+        board.style.borderCollapse = 'collapse';
+        board.style.margin = '20px auto';
+        document.body.appendChild(board);
 
-        let username = '';
-        let opponent = '';
-
-        document.getElementById('startGame').addEventListener('click', () => {
-            username = document.getElementById('username').value;
-            opponent = document.getElementById('opponent').value;
-
-            if (username && opponent) {
-                socket.emit('joinGame', { username, opponent });
+        const rows = 8;
+        const cols = 8;
+        for (let i = 0; i < rows; i++) {
+            const row = document.createElement('tr');
+            board.appendChild(row);
+            for (let j = 0; j < cols; j++) {
+                const cell = document.createElement('td');
+                cell.style.width = '50px';
+                cell.style.height = '50px';
+                cell.style.textAlign = 'center';
+                cell.style.verticalAlign = 'middle';
+                cell.style.fontSize = '24px';
+                cell.style.backgroundColor = (i + j) % 2 === 0 ? '#eee' : '#555';
+                cell.style.color = (i + j) % 2 === 0 ? '#000' : '#fff';
+                row.appendChild(cell);
             }
-        });
-
-        socket.on('move', (move) => {
-            game.move(move);
-            board.position(game.fen());
-        });
-
-        board.on('drop', (source, target) => {
-            const move = game.move({ from: source, to: target });
-            if (move) {
-                socket.emit('move', move);
-            }
-        });
+        }
     </script>
 </body>
 </html>
