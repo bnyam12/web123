@@ -30,49 +30,16 @@
         </nav>
     </header>
 
-
     <section>
         <div class="main">
             <div class="images">
                 <div class="blue-bg-outer">
                     <div class="white-bg">
                         <div class="blue-bg">
-                           <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle Video in Center</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        video {
-            width: 275px; /* اندازه ویدیو */
-            height: 275px;
-            border-radius: 50%; /* گرد کردن ویدیو */
-            object-fit: cover; /* پر کردن دایره با ویدیو */
-           position: relative;
-    top: -35px; /* برای بالا بردن ویدیو */
-    left: -35px; /* برای جابجایی ویدیو به سمت چپ */
-   
-        
-        }
-    </style>
-</head>
-<body>
-    <video autoplay loop muted>
-        <source src="VID_20241021_003032_910_resized.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</body>
-</html>
+                            <video autoplay loop muted>
+                                <source src="VID_20241021_003032_910_resized.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -88,49 +55,23 @@
                     <a href="https://instagram.com/foxb_oro2?igshid=NzZlODBkYWE4Ng=="><i class="bi bi-instagram"></i></a>
                     <a href="https://t.me/coinextrade126"><i class="bi bi-telegram"></i></a>
                 </div>
-            <!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy Text Example</title>
-    <style>
-        .oval {
-            display: inline-block; /* برای اینکه سایز به متن بچسبد */
-            padding: 10px 20px; /* فاصله داخلی */
-            border-radius: 50px; /* شکل بیضی */
-            background-color: #f0f0f0; /* رنگ پس‌زمینه */
-            text-align: center; /* متن را در وسط قرار می‌دهد */
-            border: 2px solid #ccc; /* حاشیه */
-            cursor: pointer; /* نشانگر ماوس به صورت دکمه */
-            transition: background-color 0.3s; /* انیمیشن تغییر رنگ */
-        }
 
-        .oval:hover {
-            background-color: #e0e0e0; /* تغییر رنگ پس‌زمینه در حالت hover */
-        }
-    </style>
-</head>
-<body>
+                <div class="oval" id="copyButton">v2ray</div>
+                <button onclick="location.href='chess.html'" style="margin-top: 20px; padding: 10px 20px; border-radius: 8px; background-color: #007BFF; color: white; border: none; cursor: pointer;">
+                    بازی شطرنج آنلاین
+                </button>
 
-<div class="oval" id="copyButton">v2ray</div>
+                <script>
+                    document.getElementById("copyButton").addEventListener("click", function() {
+                        var cvText = "vless://ea3b5ee5-2075-467f-9b41-7889d8d3f89f@Zmaoz.Faculty.Ucdavis.Edu:443?path=%2F%40Parsashonam%2C%40ParsashonamBots%2C%40Parsashonam_Bot%2Fws%2F%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=ParsashonamFiBot.Com&fp=firefox&type=ws&sni=Zmaoz.Faculty.Ucdavis.Edu.#%40Parsashonam%F0%9F%87%AB%F0%9F%87%AE5592451570_4f91";
 
-<script>
-document.getElementById("copyButton").addEventListener("click", function() {
-    // متن مورد نظر برای کپی کردن
-    var cvText = "vless://ea3b5ee5-2075-467f-9b41-7889d8d3f89f@Zmaoz.Faculty.Ucdavis.Edu:443?path=%2F%40Parsashonam%2C%40ParsashonamBots%2C%40Parsashonam_Bot%2Fws%2F%3Fed%3D2560&security=tls&encryption=none&alpn=h2,http/1.1&host=ParsashonamFiBot.Com&fp=firefox&type=ws&sni=Zmaoz.Faculty.Ucdavis.Edu.#%40Parsashonam%F0%9F%87%AB%F0%9F%87%AE5592451570_4f91";
-    
-    // استفاده از Clipboard API برای کپی کردن متن
-    navigator.clipboard.writeText(cvText).then(function() {
-        alert("برای حمایت از ما روی لینک تلگرام در سایت بزنید وکانال دنبال کنید ممنون!");
-    }).catch(function(err) {
-        alert("کپی متن ناموفق بود: ", err);
-    });
-}); 
-</script>
-
-</body>
-</html>
+                        navigator.clipboard.writeText(cvText).then(function() {
+                            alert("برای حمایت از ما روی لینک تلگرام در سایت بزنید و کانال دنبال کنید ممنون!");
+                        }).catch(function(err) {
+                            alert("کپی متن ناموفق بود: ", err);
+                        });
+                    });
+                </script>
             </div>
         </div>
     </section>
