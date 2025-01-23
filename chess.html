@@ -3,35 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Game</title>
+    <title>Chessboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Two-Player Chess Game</h1>
-    <div id="board"></div>
-    <script>
-        const board = document.createElement('table');
-        board.style.borderCollapse = 'collapse';
-        board.style.margin = '20px auto';
-        document.body.appendChild(board);
+    <div id="chessboard">
+        <!-- سطر اول: مهره‌های سیاه -->
+        <div class="cell dark">♜</div>
+        <div class="cell light">♞</div>
+        <div class="cell dark">♝</div>
+        <div class="cell light">♛</div>
+        <div class="cell dark">♚</div>
+        <div class="cell light">♝</div>
+        <div class="cell dark">♞</div>
+        <div class="cell light">♜</div>
 
-        const rows = 8;
-        const cols = 8;
-        for (let i = 0; i < rows; i++) {
-            const row = document.createElement('tr');
-            board.appendChild(row);
-            for (let j = 0; j < cols; j++) {
-                const cell = document.createElement('td');
-                cell.style.width = '50px';
-                cell.style.height = '50px';
-                cell.style.textAlign = 'center';
-                cell.style.verticalAlign = 'middle';
-                cell.style.fontSize = '24px';
-                cell.style.backgroundColor = (i + j) % 2 === 0 ? '#eee' : '#555';
-                cell.style.color = (i + j) % 2 === 0 ? '#000' : '#fff';
-                row.appendChild(cell);
-            }
-        }
-    </script>
+        <!-- سطر دوم: پیاده‌های سیاه -->
+        <div class="cell light">♟</div>
+        <div class="cell dark">♟</div>
+        <div class="cell light">♟</div>
+        <div class="cell dark">♟</div>
+        <div class="cell light">♟</div>
+        <div class="cell dark">♟</div>
+        <div class="cell light">♟</div>
+        <div class="cell dark">♟</div>
+
+        <!-- سطرهای وسط: خالی -->
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <!-- سایر سطرهای خالی... -->
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+        <div class="cell light"></div>
+        <div class="cell dark"></div>
+
+        <!-- سطر هفتم: پیاده‌های سفید -->
+        <div class="cell light">♙</div>
+        <div class="cell dark">♙</div>
+        <div class="cell light">♙</div>
+        <div class="cell dark">♙</div>
+        <div class="cell light">♙</div>
+        <div class="cell dark">♙</div>
+        <div class="cell light">♙</div>
+        <div class="cell dark">♙</div>
+
+        <!-- سطر هشتم: مهره‌های سفید -->
+        <div class="cell dark">♖</div>
+        <div class="cell light">♘</div>
+        <div class="cell dark">♗</div>
+        <div class="cell light">♕</div>
+        <div class="cell dark">♔</div>
+        <div class="cell light">♗</div>
+        <div class="cell dark">♘</div>
+        <div class="cell light">♖</div>
+    </div>
 </body>
 </html>
